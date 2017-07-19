@@ -29,3 +29,5 @@ for eg:db.details.update({name:"abhishek singh"},{$set:{name:"abhishek vikram si
 
 it will update abhishek singh to abhishek vikram singh
 
+delete document using command (db.collectionName.delete(deletion_criteria)
+

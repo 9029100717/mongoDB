@@ -15,3 +15,7 @@ create collection using command (db.collectionName(name,option)
 
 delete collection using command (db.collectionName.drop())
 
+insert document using command (db.collectionName.insert({document})
+
+for eg:db.details.insert({name:"abhishek singh",age:"21",address:"jogeshwari",mobile_no:"9029100717"})
+

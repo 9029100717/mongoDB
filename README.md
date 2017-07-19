@@ -23,3 +23,9 @@ view document using command (db.collectionName.find())
 
 to view the document in formatted style use command (db.collectionName.find().pretty())
 
+update document using command (db.colectionName.update(selection_criteria,update_data)
+
+for eg:db.details.update({name:"abhishek singh"},{$set:{name:"abhishek vikram singh"}})
+
+it will update abhishek singh to abhishek vikram singh
+

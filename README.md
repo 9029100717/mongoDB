@@ -31,3 +31,7 @@ it will update abhishek singh to abhishek vikram singh
 
 delete document using command (db.collectionName.delete(deletion_criteria)
 
+
+create user using command(db.createUser())
+
+for eg:db.createUser({user:"Abhi",pwd:"india1994",role:["readwrite","dbaAdmin"]})

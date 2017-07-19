@@ -10,3 +10,6 @@ created database using command (use databaseName)
 
 
 delete database using command (db.databaseName.drop())
+
+create collection using command (db.collectionName(name,option)
+

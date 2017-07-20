@@ -189,7 +189,34 @@ WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
         "last_name" : "ghose",
         "gender" : "female"
 }
->
+
+
+
+{
+  first_name: "avinash",
+  last_name: "shergil",
+  membership: ["mem1", "mem2"],
+  address: {
+    street: "2nd Stree main",
+    city: "Mumbai"
+  },
+  contact: {
+    name: "neha", relationship: "sister"
+  }
+},
+{
+  first_name: "hasan",
+  last_name: "ali",
+  membership: ["mem1", "mem2"],
+  address: {
+    street: "2nd Stree main",
+    city: "Mumbai"
+  },
+  contact: {
+    name: "Sneha", relationship: "friend"
+  }
+}
+
 
 
 

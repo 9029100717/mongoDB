@@ -219,4 +219,18 @@ WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
 
 
 
+> db.customers.find().forEach(function(doc){print("customer Name:"+doc.first_nam
+e)});
+customer Name:undefined
+customer Name:priya
+customer Name:Raj
+customer Name:Sheela
+customer Name:undefined
+customer Name:Mohan
+customer Name:avinash
+customer Name:undefined
+
+
+
+
 

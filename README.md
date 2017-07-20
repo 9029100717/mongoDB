@@ -106,3 +106,90 @@ db.customers.find().pretty()
 db.customers.update({first_name:"abhishek"},{first_name:"abhishek", middle_name:"vikram", last_name:"singh"})
 WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
 
+> db.customers.update({first_name:"priya"},{$set:{age:25}});
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.customers.find().pretty()
+{
+        "_id" : ObjectId("59704d3077e33dfa6c1f987e"),
+        "first_name" : "abhishek",
+        "middle_name" : "vikram",
+        "last_name" : "singh"
+}
+{
+        "_id" : ObjectId("59704d3077e33dfa6c1f987f"),
+        "first_name" : "priya",
+        "last_name" : "singh",
+        "gender" : "female",
+        "age" : 25
+}
+{
+        "_id" : ObjectId("59704def77e33dfa6c1f9880"),
+        "first_name" : "Raj",
+        "last_name" : "Trivedi",
+        "gender" : "male"
+}
+{
+        "_id" : ObjectId("59704def77e33dfa6c1f9881"),
+        "first_name" : "Sheela",
+        "last_name" : "ghose",
+        "gender" : "female"
+}
+> db.customers.update({first_name:"priya"},{$inc:{age:25}});
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.customers.find().pretty()
+{
+        "_id" : ObjectId("59704d3077e33dfa6c1f987e"),
+        "first_name" : "abhishek",
+        "middle_name" : "vikram",
+        "last_name" : "singh"
+}
+{
+        "_id" : ObjectId("59704d3077e33dfa6c1f987f"),
+        "first_name" : "priya",
+        "last_name" : "singh",
+        "gender" : "female",
+        "age" : 50
+}
+{
+        "_id" : ObjectId("59704def77e33dfa6c1f9880"),
+        "first_name" : "Raj",
+        "last_name" : "Trivedi",
+        "gender" : "male"
+}
+{
+        "_id" : ObjectId("59704def77e33dfa6c1f9881"),
+        "first_name" : "Sheela",
+        "last_name" : "ghose",
+        "gender" : "female"
+}
+> db.customers.update({first_name:"priya"},{$unset:{age:1}});
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+> db.customers.find().pretty()
+{
+        "_id" : ObjectId("59704d3077e33dfa6c1f987e"),
+        "first_name" : "abhishek",
+        "middle_name" : "vikram",
+        "last_name" : "singh"
+}
+{
+        "_id" : ObjectId("59704d3077e33dfa6c1f987f"),
+        "first_name" : "priya",
+        "last_name" : "singh",
+        "gender" : "female"
+}
+{
+        "_id" : ObjectId("59704def77e33dfa6c1f9880"),
+        "first_name" : "Raj",
+        "last_name" : "Trivedi",
+        "gender" : "male"
+}
+{
+        "_id" : ObjectId("59704def77e33dfa6c1f9881"),
+        "first_name" : "Sheela",
+        "last_name" : "ghose",
+        "gender" : "female"
+}
+>
+
+
+
